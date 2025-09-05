@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Header*/
 header {
     display: grid;
@@ -30,7 +34,7 @@ header span {
   font-size: 2rem;
   color: #320444;
   cursor: pointer;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .hamburger::before {
   content: "\2630";
