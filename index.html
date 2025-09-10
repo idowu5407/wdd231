@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Site Home Page</title>
-        <meta name="decription" content="Learning activity to build home page">
+        <title>Home | Student Portfolio</title>
+        <meta name="decription" content="My Portfolio Page with courses">
         <meta name="author" content="Idowu Sunday">
-        <link rel="stylesheet" href="styles/basescreen.css">
+        <link rel="stylesheet" href="styles/small.css">
         <link rel="stylesheet" href="styles/largscreen.css">
         <script src="scripts/navigation.js" defer></script>
+        <script src="Scripts/dates.js" defer></script>
+        <script src="Scripts/course.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
@@ -21,27 +23,50 @@
         </header>
         <nav id="nav-bar" class="navigation">
             <ul>
-                <li><a href="#">News & Events</a></li>
-                <li class="cureent"><a href="#">Dedicated Temples</a></li>
-                <li><a href="#">Announced Temples</a></li>
+                <li><a href="#">Home</a></li>
+                <li class="cureent"><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
         <main>
-            <h1>Dedicated Temple</h1>
+            <h1>Home</h1>
             <section>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, perferendis quis hic officiis expedita eum enim! Ut molestias eligendi ab inventore sapiente aperiam nam vel eos? Vitae laudantium cumque officiis.</p>
+                <h2>About Me</h2>
+                <p>Hello, My name is Idowu Sunday, and i'm from Nigeria. I am passionate creative with a background in painting and digital art, my works reflects the world around me, its culture, struggles and untold stories. With 5 years of experience have completed over 45 art portrait and commissions along with graphic design work for over 30 companies in Nigeria. I'm currently expanding my skills in web and computer prograamming, which helps me blend visual creativity with technology.</p>
             </section>
+
+            <section>
+                <h2>Idowu Sunday</h2>
+                 <img src="images/Profile_picture.jpg" alt="Profile Picture" width="100" height="130">
+            </section>
+
+            <section id="courses">
+                <h2>Web Certificate courses</h2>
+                <div class="filters">
+                    <button data-filter="all" class="filter-btn">All</button>
+                    <button data-filter="cse" class="filter-btn">CSE</button>
+                    <button data-filter="wdd" class="filter-btn">WDD</button>
+                </div>
+                <div id="course-list" class="course-list"></div>
+                <p id="total-credits"></p>
+           </section>
     
         </main>
         <footer>
             <div class="socailicon">
-                    <a href="" target="_blank"><img src="images/instagram_icon.svg" alt="Instagram_icon" width="16" height="16"></a>
-                    <a href="" target="_blank"><img src="images/github_icon.svg" alt="Github_icon" width="16" height="16"></a>
-                    <a href="" target="_blank"><img src="images/linkedin_icon.svg" alt="Linkedin_icon" width="16" height="16"></a>
-                    <a href="" target="_blank"><img src="images/whatsapp_icon.svg" alt="whatsapp_icon" width="16" height="16"></a>          
+                    <a href="https://www.instagram.com/Sunday_idowu22" target="_blank">
+                        <img src="images/instagram_icon.svg" alt="Instagram_icon" width="16" height="16"></a>
+                    <a href="https://github.com/idowu5407/wdd131" target="_blank">
+                        <img src="images/github_icon.svg" alt="Github_icon" width="16" height="16"></a>
+                    <a href="https://www.linkedin.com/in/idowu-sunday" target="_blank">
+                        <img src="images/linkedin_icon.svg" alt="Linkedin_icon" width="16" height="16"></a>
+                    <a href="https://wa.me/message/QPBIGPM2SDICM1" target="_blank">
+                        <img src="images/whatsapp_icon.svg" alt="whatsapp_icon" width="16" height="16"></a>          
             </div>
-            <p>Copyright symbol and current year</p>
-            <p>Last modified</p>
+             <div class="copyright">
+                <p>&copy;<span id="currentyear">2025</span>🌴Idowu Sunday | Ogun State | Nigeria</p>
+                <p id="lastModified"></p>
+            </div>
         </footer>        
     </body>
 </html>
