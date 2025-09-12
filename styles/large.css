@@ -1,7 +1,9 @@
-@media only screen and (min-width: 38rem) { 
-    header, main, nav, footer {
-        max-width: 900px;
-        margin: 0 auto;
+/* Responsive */
+
+@media (min-width: 700px) { 
+    #menu-toggle {
+     display: inline-block;
+       
     }
 
     header {
@@ -14,7 +16,6 @@
 
     .navigation {
         display: block;
-        border-bottom: solid 1px #eee;
     }
 
     .navigation ul {
@@ -24,5 +25,12 @@
     .navigation a {
         border: none;
     }
+
+  .about {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
 }

@@ -1,9 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Set the current year
-  var currentYear = new Date().getFullYear();
-  document.getElementById("currentyear").textContent = currentYear;
+// date and time
+const yearSpan = document.querySelector("#year");
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-  // Set the last modified date
-  var lastModified = document.lastModified;
-  document.getElementById("lastModified").textContent = "Last Modified: " + lastModified;
-});
+const lastModified = document.querySelector("#lastModified");
+if (lastModified) lastModified.textContent = `Last Modification: ${document.lastModified}`;
