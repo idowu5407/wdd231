@@ -1,6 +1,6 @@
 /* Responsive */
 
-@media (min-width: 700px) { 
+@media (min-width: 38rem) { 
     #menu-toggle {
      display: inline-block;
        
