@@ -1,0 +1,66 @@
+/* prophets.css */
+
+/* General page styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+header, footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Cards grid container */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Each card */
+#cards section {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+#cards section:hover {
+  transform: translateY(-5px);
+}
+
+/* Prophet name */
+#cards h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #004080;
+  font-weight: bold;
+}
+
+/* Prophet details */
+#cards p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Prophet portrait */
+#cards img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
