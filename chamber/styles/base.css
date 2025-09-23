@@ -115,7 +115,7 @@ h2 {
 }
 
 .member-card {
-  background: white;
+  background: rgb(133, 144, 240);
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -130,7 +130,7 @@ h2 {
 /* Footer */
 footer {
   margin-top: 2rem;
-  background: #004080;
+  background: #d72424;
   color: white;
   text-align: center;
   padding: 1rem;
