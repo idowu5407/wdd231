@@ -1,145 +1,29 @@
-// Courses Data
-const courses = [
-  {
-    subject: 'CSE',
-    number: 110,
-    title: 'Introduction to Programming',
-    credits: 2,
-    certificate: 'Web and Computer Programming',
-    description: 'This course will introduce students to programming...',
-    technology: ['Python'],
-    completed: true
-  },
-  {
-    subject: 'WDD',
-    number: 130,
-    title: 'Web Fundamentals',
-    credits: 2,
-    certificate: 'Web and Computer Programming',
-    description: 'This course introduces students to the World Wide Web...',
-    technology: ['HTML', 'CSS'],
-    completed: true
-  },
-  {
-    subject: 'CSE',
-    number: 111,
-    title: 'Programming with Functions',
-    credits: 2,
-    certificate: 'Web and Computer Programming',
-    description: 'CSE 111 students become more organized, efficient...',
-    technology: ['Python'],
-    completed: true
-  },
-  {
-    subject: 'CSE',
-    number: 210,
-    title: 'Programming with Classes',
-    credits: 2,
-    certificate: 'Web and Computer Programming',
-    description: 'This course will introduce the notion of classes...',
-    technology: ['C#'],
-    completed: true
-  },
-  {
-    subject: 'WDD',
-    number: 131,
-    title: 'Dynamic Web Fundamentals',
-    credits: 2,
-    certificate: 'Web and Computer Programming',
-    description: 'This course builds on prior experience in Web Fundamentals...',
-    technology: ['HTML', 'CSS', 'JavaScript'],
-    completed: true
-  },
-  {
-    subject: 'WDD',
-    number: 231,
-    title: 'Frontend Web Development I',
-    credits: 2,
-    certificate: 'Web and Computer Programming',
-    description: 'This course builds on prior experience with Dynamic Web Fundamentals...',
-    technology: ['HTML', 'CSS', 'JavaScript'],
-    completed: false
-  }
-];
-
-export default byuiCourse = {
+// course.mjs
+const byuiCourse = {
   code: "WDD231",
   name: "Web Frontend Development I",
   sections: [
-    {
-      sectionNumber: 1,
-      enrolled: 88,
-      instructor: "Brother Bingham",
-    },
-    {
-      sectionNumber: 2,
-      enrolled: 81,
-      instructor: "Sister Shultz",
-    },
-    {
-      sectionNumber: 3,
-      enrolled: 95,
-      instructor: "Sister Smith",
-    },
+    { sectionNumber: 1, enrolled: 88, instructor: "Brother Bingham" },
+    { sectionNumber: 2, enrolled: 81, instructor: "Sister Shultz" },
+    { sectionNumber: 3, enrolled: 95, instructor: "Sister Smith" },
   ],
   changeEnrollment: function (sectionNumber, add = true) {
-    // Find the section with the given section number
+    // normalize the incoming sectionNumber (handles string or number)
+    const sNum = Number(sectionNumber);
     const sectionIndex = this.sections.findIndex(
-      (section) => section.sectionNumber == sectionNumber
+      (section) => section.sectionNumber === sNum
     );
     if (sectionIndex >= 0) {
       if (add) {
         this.sections[sectionIndex].enrolled++;
       } else {
-        this.sections[sectionIndex].enrolled--;
+        // protect against negative enroll counts
+        if (this.sections[sectionIndex].enrolled > 0) {
+          this.sections[sectionIndex].enrolled--;
+        }
       }
     }
   },
-  
 };
 
-// DOM Elements
-const courseList = document.getElementById('course-list');
-const creditCount = document.getElementById('credit-count');
-const filterButtons = document.querySelectorAll('#filters button');
-
-// Render Courses
-function renderCourses(filter = 'all') {
-  courseList.innerHTML = '';
-
-  let filtered = courses.filter(course => {
-    if (filter === 'all') return true;
-    return course.subject === filter;
-  });
-
-  filtered.forEach(course => {
-    const card = document.createElement('div');
-    card.classList.add('course-card');
-    if (course.completed) card.classList.add('completed');
-
-    card.innerHTML = `
-      <h3>${course.subject} ${course.number}: ${course.title}</h3>
-      <p><strong>Credits:</strong> ${course.credits}</p>
-      <p><strong>Certificate:</strong> ${course.certificate}</p>
-      <p>${course.description}</p>
-      <p class="tech"><strong>Tech:</strong> ${course.technology.join(', ')}</p>
-      <p><strong>Status:</strong> ${course.completed ? '✅ Completed' : '❌ Not Completed'}</p>
-    `;
-    courseList.appendChild(card);
-  });
-
-  // Update credit count
-  const totalCredits = filtered.reduce((sum, c) => sum + c.credits, 0);
-  creditCount.textContent = totalCredits;
-}
-
-// Filter Events
-filterButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    renderCourses(btn.dataset.filter);
-  });
-});
-
-
-// Initial Render
-renderCourses();
+export default byuiCourse;
