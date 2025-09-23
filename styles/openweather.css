@@ -1,0 +1,68 @@
+body, h1, p, figure, footer {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Center content */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem 0;
+  color: #004466;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#current-temp {
+  font-weight: bold;
+  color: #d9534f;
+}
+
+/* Weather figure */
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+figure img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+figcaption {
+  font-style: italic;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #004466;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
