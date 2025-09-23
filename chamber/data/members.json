@@ -12,8 +12,8 @@
     "name": "leaf Cafe",
     "address": "4 Ederson Strt, Ijebu Ode, Ogun State.",
     "phone": "08166965407",
-    "website": "https://greenleafcafe.com",
-    "image": "greenleaf.png",
+    "website": "https://leafcafe.com",
+    "image": "leafcafe.png",
     "membership": 2,
     "info": "Organic and eco-friendly coffee shop."
   },
@@ -57,7 +57,7 @@
     "name": "Punch Nigeria",
     "address": "345 Road Ogijo, Sagamu, Ogun State.",
     "phone": "08166965407",
-    "website": "https://cityvillenews.com",
+    "website": "https://punchnigeria.com",
     "image": "news.png",
     "membership": 3,
     "info": "Stay informed with the latest local news."

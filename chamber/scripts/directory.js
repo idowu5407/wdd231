@@ -1,7 +1,6 @@
 // Last modified //
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Member container //
 const membersContainer = document.querySelector("#members");
 const gridBtn = document.querySelector("#gridBtn");
 const listBtn = document.querySelector("#listBtn");
@@ -19,8 +18,11 @@ function displayMembers(members) {
     const card = document.createElement("section");
     card.classList.add("member-card");
 
+    // Always load from /images/ folder
+    const imgSrc = `images/${member.image}`;
+
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo">
+      <img src="${imgSrc}" alt="${member.name} logo">
       <h3>${member.name}</h3>
       <p>${member.address}</p>
       <p>${member.phone}</p>
