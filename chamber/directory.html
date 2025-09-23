@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Chamber Directory</title>
+    <meta name="author" content="Idowu Sunday">
+    <meta name="description" content="Discover local businesses and organizations in our Chamber of Commerce directory.">
+    <meta property="og:description" content="Explore our local businesses and organizations that are part of the Chamber of Commerce.">
+    <meta property="og:title" content="Chamber Directory | Ogun State, Nigeria">
+    <meta property="og:image" content="https://drive.google.com/file/d/1Flv_T8SWeZP8rLolCCdPT88xSOFaUlof/view?usp=drive_link">
+    <meta property="og:url" content="https://idowu5407.github.io/wdd231/">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <link rel="icon" href="images/Olumo_rock.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <header>
+    <h1>Chamber of Commerce</h1>
+    
+    <!-- Hamburger button -->
+    <button id="menuBtn" class="menu-btn">☰</button>
+    
+    <nav id="navMenu">
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+      <h2>Business Directory</h2>
+
+      <!-- View toggle buttons -->
+      <div class="view-toggle">
+        <button id="gridBtn">Grid View</button>
+        <button id="listBtn">List View</button>
+      </div>
+
+      <!-- Members container -->
+      <section id="members" class="grid"></section>
+    </main>
+
+    <footer>
+      <p>Contact us: isunday5@byupathway.edu | +2348166965407</p>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/Sunday_idowu22" target="_blank" aria-label="Instagram">
+          <img src="images/instagram_icon.svg" alt="Instagram">
+        </a>
+        <a href="https://github.com/idowu5407/wdd131" target="_blank" aria-label="GitHub">
+          <img src="images/github_icon.svg" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/idowu-sunday" target="_blank" aria-label="LinkedIn">
+          <img src="images/linkedin_icon.svg" alt="LinkedIn">
+        </a>
+        <a href="https://wa.me/message/QPBIGPM2SDICM1" target="_blank" aria-label="WhatsApp">
+          <img src="images/whatsapp_icon.svg" alt="WhatsApp">
+        </a>
+      </div>
+      
+      <!--Last modified-->
+      <p>Idowu Sunday | WDD 231</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "SunTech Solutions",
+    "address": "50 Surulere, Sagamu, Ogun State.",
+    "phone": "08166965407",
+    "website": "https://suntech.com",
+    "image": "suntech.png",
+    "membership": 3,
+    "info": "Leading provider of tech solutions for small businesses."
+  },
+  {
+    "name": "leaf Cafe",
+    "address": "4 Ederson Strt, Ijebu Ode, Ogun State.",
+    "phone": "08166965407",
+    "website": "https://greenleafcafe.com",
+    "image": "greenleaf.png",
+    "membership": 2,
+    "info": "Organic and eco-friendly coffee shop."
+  },
+  {
+    "name": "Bright Futures Non-Profit",
+    "address": "80 Ayegbami Ijebu Igbo, Ogun State.",
+    "phone": "08166965407",
+    "website": "https://brightfutures.org",
+    "image": "brightfutures.png",
+    "membership": 1,
+    "info": "Supporting education for underprivileged children."
+  },
+  {
+    "name": "Trust Bank",
+    "address": "704 Sabo Sagamu, Ogun State.",
+    "phone": "08166965407",
+    "website": "https://trustbank.com",
+    "image": "bank.png",
+    "membership": 3,
+    "info": "Trusted financial services with decades of experience."
+  },
+  {
+    "name": "Be Fit",
+    "address": "3 Okelowo street, Abeokuta, Ogun State.",
+    "phone": "08166965407",
+    "website": "https://befit.com",
+    "image": "fitness.png",
+    "membership": 2,
+    "info": "Top-notch fitness center with modern equipment."
+  },
+  {
+    "name": "Joy Vet",
+    "address": "345 Ijagba street, Sagamu, Ogun State.",
+    "phone": "08166965407",
+    "website": "https://joyvet.com",
+    "image": "vet.png",
+    "membership": 1,
+    "info": "Caring for your pets like family."
+  },
+  {
+    "name": "Punch Nigeria",
+    "address": "345 Road Ogijo, Sagamu, Ogun State.",
+    "phone": "08166965407",
+    "website": "https://cityvillenews.com",
+    "image": "news.png",
+    "membership": 3,
+    "info": "Stay informed with the latest local news."
+  }
+]
