@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Chamber of Commerce</title>
+    <title>Directory | Chamber of Commerce</title>
     <meta name="author" content="Idowu Sunday">
     <meta name="description" content="Discover local businesses and organizations in our Chamber of Commerce directory.">
     <meta property="og:description" content="Explore our local businesses and organizations that are part of the Chamber of Commerce.">
@@ -20,21 +20,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-  <header>
-    <h1>Chamber of Commerce</h1>
-    
-    <!-- Hamburger button -->
-    <button id="menuBtn" class="menu-btn">☰</button>
-    
-    <nav id="navMenu">
-      <ul class="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <div class="logo">
+          <img src="images/amazing_chamber_home_logo.svg" alt="Amazing Chamber of Commerce Logo">
+          <h1>Amazing Chamber of Commerce</h1>
+      </div>
+      <!-- Hamburger button -->
+      <button id="hamburger">☰</button>
+      <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+          </ul>
+      </nav>     
+    </header>
 
     <main>
       <h2>Chamber Directory</h2>
@@ -50,9 +51,13 @@
     </main>
 
     <footer>
-      <p>Contact us: isunday5@byupathway.edu | +2348166965407</p>
-
-      <div class="social-links">
+      <div class="footer-info">
+        <p>Amazing Chamber of Commerce</p>
+          <p>No. 60 Surulere Eleja Sagamu, Ogun State.</p>
+          <p>Email: isunday5@byupathway.edu</p>
+          <p>Phone: +2348166965407</p>
+      </div>
+      <div class="social">
         <a href="https://www.instagram.com/Sunday_idowu22" target="_blank" aria-label="Instagram">
           <img src="images/instagram_icon.svg" alt="Instagram">
         </a>
@@ -66,10 +71,12 @@
           <img src="images/whatsapp_icon.svg" alt="WhatsApp">
         </a>
       </div>
-      
-      <!--Last modified-->
-      <p>Idowu Sunday | WDD 231</p>
-      <p>Last Modified: <span id="lastModified"></span></p>
+      <div>
+          <p>WDD231 Class Project</p>
+          <p>Idowu Sunday</p>
+          <p>&copy; <span id="year"></span> Amazing Lord Art</p>
+          <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
     </footer>
   </body>
 </html>

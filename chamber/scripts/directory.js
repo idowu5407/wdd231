@@ -1,6 +1,4 @@
 // Last modified //
-document.getElementById("lastModified").textContent = document.lastModified;
-
 const membersContainer = document.querySelector("#members");
 const gridBtn = document.querySelector("#gridBtn");
 const listBtn = document.querySelector("#listBtn");
