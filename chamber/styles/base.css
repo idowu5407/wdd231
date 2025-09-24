@@ -122,10 +122,11 @@ main section {
 .events h2,
 .weather h2,
 .spotlights h2 {
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid #abebd2;
-  padding-bottom: 0.25rem;
-  color: #ffffff;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #454545;
+  
 }
 
 .current-weather h3, 
