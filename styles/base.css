@@ -145,6 +145,17 @@ h2 {
   border-radius: 10px;
 }
 
+.filters, .course, .credits {
+  justify-content: center;
+}
+
+/* Cente the certificate courses section */
+#filters, #courses, #credits {
+  text-align: center;
+}
+
+
+
 /* Filters */
 #filters button {
   margin: 0.3rem;
@@ -167,7 +178,9 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
+  justify-items: center;
 }
+
 
 .course-card {
   background: white;
