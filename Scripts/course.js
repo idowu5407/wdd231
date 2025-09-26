@@ -1,3 +1,20 @@
+// ------------------ Responsive Navigation ------------------
+const navButton = document.getElementById("nav-button");
+const navBar = document.getElementById("nav-bar");
+
+navButton.addEventListener("click", () => {
+  navButton.classList.toggle("show");
+  navBar.classList.toggle("show");
+});
+
+// date and time
+const yearSpan = document.querySelector("#year");
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+const lastModified = document.querySelector("#lastModified");
+if (lastModified) lastModified.textContent = `Last Modification: ${document.lastModified}`;
+
+
 // ------------------ Courses Data ------------------
 let courses = [
   {
