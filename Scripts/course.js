@@ -1,20 +1,3 @@
-// ------------------ Responsive Navigation ------------------
-const navButton = document.getElementById("nav-button");
-const navBar = document.getElementById("nav-bar");
-
-navButton.addEventListener("click", () => {
-  navButton.classList.toggle("show");
-  navBar.classList.toggle("show");
-});
-
-// date and time
-const yearSpan = document.querySelector("#year");
-if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-const lastModified = document.querySelector("#lastModified");
-if (lastModified) lastModified.textContent = `Last Modification: ${document.lastModified}`;
-
-
 // ------------------ Courses Data ------------------
 let courses = [
   {
@@ -94,6 +77,7 @@ courses = courses.map(course => {
 const courseList = document.getElementById("course-list");
 const creditCount = document.getElementById("credit-count");
 const filterButtons = document.querySelectorAll("#filters button");
+const courseDetails = document.querySelector("#course-details"); // dialog
 
 // ------------------ Render Courses ------------------
 function renderCourses(courseArray) {
@@ -113,12 +97,45 @@ function renderCourses(courseArray) {
       <p class="tech"><strong>Technology:</strong> ${course.technology.join(", ")}</p>
     `;
 
+    // Add click event to open modal with details
+    card.addEventListener("click", () => {
+      displayCourseDetails(course);
+    });
+
     courseList.appendChild(card);
   });
 
   // Update credits
   const totalCredits = courseArray.reduce((sum, c) => sum + c.credits, 0);
   creditCount.textContent = totalCredits;
+}
+
+// ------------------ Modal Display ------------------
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>
+    <p><strong>Status</strong>: ${course.completed ? "✅ Completed" : "❌ Not Completed"}</p>
+  `;
+
+  courseDetails.showModal();
+
+  // Close with ❌ button
+  document.querySelector("#closeModal").addEventListener("click", () => {
+    courseDetails.close();
+  });
+
+  // Close when clicking outside modal
+  courseDetails.addEventListener("click", (e) => {
+    if (e.target === courseDetails) {
+      courseDetails.close();
+    }
+  });
 }
 
 // ------------------ Filter Handling ------------------
