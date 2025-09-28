@@ -1,4 +1,4 @@
-
+/* ------------------ Base Reset ------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   color: #333;
 }
 
-/* Header */
+/* ------------------ Header ------------------ */
 header {
   display: flex;
   justify-content: space-between;
@@ -39,9 +39,10 @@ header h1 {
   font-size: 1.5rem;
   background: none;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
+/* ------------------ Navigation ------------------ */
 nav {
   display: none;
   position: absolute;
@@ -51,6 +52,10 @@ nav {
   width: 200px;
   border: 1px solid #ccc;
   z-index: 1000;
+}
+
+nav.show {
+  display: block;
 }
 
 nav ul {
@@ -73,12 +78,7 @@ nav a:hover {
   background: #ffffff;
 }
 
-/* Show menu when active */
-nav.show {
-  display: block;
-}
-
-/* Hero */
+/* ------------------ Hero Section ------------------ */
 .hero {
   position: relative;
   text-align: center;
@@ -97,18 +97,13 @@ nav.show {
   transform: translateX(-50%);
   padding: 0.75rem 1.5rem;
   background: #454545;
-  color: #ffffff;
-  text-decoration: none;
+  color: #fff;
   font-weight: bold;
+  text-decoration: none;
   border-radius: 5px;
-  
 }
 
-
-
-
-
-/* Sections */
+/* ------------------ Main Sections ------------------ */
 main section {
   padding: 1rem;
 }
@@ -117,9 +112,9 @@ main section {
 .weather,
 .spotlights {
   margin: 1rem 0;
-  border: 1px solid #ffffff;
   padding: 1rem;
   background: #04f06a;
+  border: 1px solid #fff;
 }
 
 .events h2,
@@ -127,24 +122,14 @@ main section {
 .spotlights h2 {
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
-  color: #fff;
   background-color: #454545;
-  
+  color: #fff;
 }
 
-.current-weather h3, 
-.forecast h3 {
-  color: #454545;
-  margin-bottom: 0.5rem;
-
-}
-
-/* Weather */
+/* ------------------ Weather ------------------ */
 .weather {
   background: #454545;
-  border: 1px solid #ffffff;
   border-radius: 6px;
-  padding: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -152,43 +137,47 @@ main section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
 }
 
-.current-weather, .forecast {
+.current-weather,
+.forecast {
   background: #f1f6fa;
   padding: 1rem;
   border-radius: 6px;
   border: 1px solid #ddd;
 }
 
-
-.current-weather ul, .forecast ul {
-  padding: 1rem;
-  display: block;
-  margin: 0.25rem 0 0;
-  
+.current-weather h3,
+.forecast h3 {
+  color: #454545;
+  margin-bottom: 0.5rem;
 }
 
-.current-weather li, .forecast li  {
+.current-weather ul,
+.forecast ul {
+  padding: 1rem;
+  margin-top: 0.25rem;
+}
+
+.current-weather li,
+.forecast li {
   font-size: 15px;
   margin: 0.25rem 0;
-} 
+}
 
-
-/* View Toggle */
+/* ------------------ View Toggle ------------------ */
 .view-toggle {
-  margin-bottom: 1rem;
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .view-toggle button {
   flex: 1;
   padding: 0.5rem;
-  border: none;
   background: #454545;
-  color: #ffffff;
+  color: #fff;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -197,10 +186,9 @@ main section {
   background: #04f06a;
 }
 
-/* Members (Default Grid) */
+/* ------------------ Members ------------------ */
 #members.grid {
   display: flex;
-  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
@@ -208,19 +196,14 @@ main section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
 }
 
 .member-card {
   background: #04f06a;
   padding: 1rem;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-
-.member-card.list-img {
-  display: none;
 }
 
 .member-card img {
@@ -228,9 +211,7 @@ main section {
   margin-bottom: 0.5rem;
 }
 
-
-
-/* Spotlights */
+/* ------------------ Spotlights ------------------ */
 #spotlight-cards {
   display: flex;
   flex-direction: column;
@@ -238,9 +219,9 @@ main section {
 }
 
 .spotlight-card {
-  border: 1px solid #454545;
-  padding: 1rem;
   background: #fff;
+  padding: 1rem;
+  border: 1px solid #454545;
   text-align: center;
 }
 
@@ -258,7 +239,7 @@ main section {
   color: #0055aa;
 }
 
-/* Footer */
+/* ------------------ Footer ------------------ */
 footer {
   background: #9dcbba;
   text-align: center;
@@ -285,15 +266,14 @@ footer {
 
 .social :hover {
   transform: scale(1.1);
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-
+/* ------------------ Membership Cards ------------------ */
 .membership-cards {
   padding: 40px;
 }
 
-/* Animate membership cards on page load */
 .animate-card {
   opacity: 0;
   transform: translateY(20px);
@@ -313,12 +293,40 @@ footer {
 }
 
 
+
+/* Animate .level cards on page load */
+.level {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.level:nth-child(1) { animation-delay: 0.2s; }
+.level:nth-child(2) { animation-delay: 0.4s; }
+.level:nth-child(3) { animation-delay: 0.6s; }
+.level:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect for entire .level box */
+.level:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ------------------ Form Styling ------------------ */
 form {
-  background: white;
+  background: #fff;
   padding: 20px;
+  width: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeSlideIn 1s forwards;
@@ -348,11 +356,11 @@ button {
   width: 100%;
   padding: 10px;
   background: #007BFF;
+  color: #fff;
   border: none;
-  color: white;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
+  cursor: pointer;
 }
 
 button:hover {

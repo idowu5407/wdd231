@@ -10,6 +10,10 @@
         <link rel="stylesheet" href="styles/large.css">
         <script src="scripts/navigation.js" defer></script>
         <script src="scripts/join.js" defer></script>
+        <meta property="og:description" content="Unlock exclusive networking opportunities, business resources, and community influence. Become a member of the Chamber and elevate your business.">
+        <meta property="og:title" content="Join the Chamber of Commerce Today!">
+        <meta property="og:image" content="https://drive.google.com/file/d/1Flv_T8SWeZP8rLolCCdPT88xSOFaUlof/view?usp=drive_link">
+        <meta property="og:url" content="https://idowu5407.github.io/wdd231/chamber/directory.html">
         <link rel="icon" href="images/olumo_rock.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,40 +38,67 @@
         </header>
 
         <main>
-            <section>
-                <h2>Join the Chamber</h2>
-                <form id="joinForm" method="get" action="thankyou.html"></form>
-            </section>
+            <h1>Join the Chamber</h1>
 
-            <!-- Membership Cards -->
-            <section class="membership-cards">
-                <h2>Membership Levels</h2>
-                <div class="cards">
-                    <div class="member-card animate-card">
-                        <h3>NP Membership</h3>
-                        <p>No fee, Non-profits only</p>
-                        <a href="#npModal">Learn More</a>
-                    </div>
+            <div class="container">
+                 <!-- Membership Application Form -->
+                <form method="get" action="thankyou.html">
+                    <h2>Membership Application Form</h2>
+                    <label>First Name:<input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required></label>
+                    <label> Last Name:<input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required></label>
+                    <label>Organizational Title:<input type="text" name="organizationTitle" title="Enter your role in the organization" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}"></label>
+                    <label>Email:<input type="email" name="email" title="Enter your email" autocomplete="email" placeholder="example@email.com" required></label>
+                    <label> Mobile Phone:<input type="tel" name="phone" title="Enter your mobile number" autocomplete="tel" required></label>
+                    <label>Business/Organization Name: <input type="text" name="organization" title="Enter your organization name" autocomplete="organization" required></label>
+                    <label> Business Description:<textarea name="description" title="Describe your business"></textarea></label>
+            
+                    <label> Membership Level:                  
+                        <select name="membership" title="Select membership level" required>
+                            <option value="">-- Select a level --</option>
+                            <option value="np">NP Membership (Free)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
 
-                    <div class="member-card animate-card">
-                        <h3>Bronze Membership</h3>
-                        <p>Basic benefits, entry level</p>
-                        <a href="#bronzeModal">Learn More</a>
-                    </div>
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    <button type="submit">Submit Application</button>   
+                </form>       
+               
 
-                    <div class="member-card animate-card">
-                        <h3>Silver Membership</h3>
-                        <p>Extra benefits & event access</p>
-                        <a href="#silverModal">Learn More</a>
-                    </div>
+                <!-- Membership Cards -->
+                <section class="membership-cards">
+                    <h2>Membership Levels</h2>
 
-                    <div class="member-card animate-card">
-                        <h3>Gold Membership</h3>
-                        <p>Full benefits + advertising</p>
-                        <a href="#goldModal">Learn More</a>
+                    <div class="cards">
+                        <div class="member-card">
+                            <h3>NP Membership</h3>
+                            <p>No fee, Non-profits only</p>
+                            <a href="#npmodal">Learn More</a>
+                        </div>
+
+                        <div class="member-card">
+                            <h3>Bronze Membership</h3>
+                            <p>Basic benefits, entry level</p>
+                            <a href="#bronzemodal">Learn More</a>
+                        </div>
+
+                        <div class="member-card">
+                            <h3>Silver Membership</h3>
+                            <p>Extra benefits & event access</p>
+                            <a href="#silvermodal">Learn More</a>
+                        </div>
+
+                        <div class="member-card">
+                            <h3>Gold Membership</h3>
+                            <p>Full benefits + advertising</p>
+                            <a href="#goldmodal">Learn More</a>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
+            
 
             <!-- Modals -->
             <dialog id="npModal">
@@ -93,6 +124,7 @@
                 <p>Full chamber benefits: maximum advertising, sponsorships, event discounts, and leadership opportunities.</p>
                 <button onclick="document.getElementById('goldModal').close()">Close</button>
             </dialog>
+    
         </main>
 
         <footer>
@@ -124,4 +156,11 @@
             </div>
         </footer>
     </body>
-</html>
+</html>   
+
+
+  
+
+
+  
+    
