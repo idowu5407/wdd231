@@ -40,6 +40,8 @@ header h1 {
   background: none;
   border: none;
   cursor: pointer;
+  
+  
 }
 
 /* ------------------ Navigation ------------------ */
@@ -47,7 +49,7 @@ nav {
   display: none;
   position: absolute;
   top: 60px;
-  right: 0;
+  right: 1rem;
   background: #f4f4f4;
   width: 200px;
   border: 1px solid #ccc;
@@ -56,6 +58,7 @@ nav {
 
 nav.show {
   display: block;
+  justify-content: end;
 }
 
 nav ul {
@@ -68,7 +71,7 @@ nav li {
 
 nav a {
   display: block;
-  padding: 0.75rem;
+  padding: 1rem 10px;
   text-decoration: none;
   color: #333;
 }
@@ -270,61 +273,48 @@ footer {
 }
 
 /* ------------------ Membership Cards ------------------ */
-.membership-cards {
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.member-card {
   padding: 40px;
 }
 
-.animate-card {
+/* Animation setup */
+.member-card {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1s ease-out forwards;
+  animation-fill-mode: forwards;
 }
 
-.animate-card:nth-child(1) { animation-delay: 0.2s; }
-.animate-card:nth-child(2) { animation-delay: 0.4s; }
-.animate-card:nth-child(3) { animation-delay: 0.6s; }
-.animate-card:nth-child(4) { animation-delay: 0.8s; }
+/* Staggered delays */
+.animate-card:nth-of-type(1) { animation-delay: 0.2s; }
+.animate-card:nth-of-type(2) { animation-delay: 0.4s; }
+.animate-card:nth-of-type(3) { animation-delay: 0.6s; }
+.animate-card:nth-of-type(4) { animation-delay: 0.8s; }
 
+/* Keyframes */
 @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-
-
-/* Animate .level cards on page load */
-.level {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s ease-out forwards;
-}
-
-.level:nth-child(1) { animation-delay: 0.2s; }
-.level:nth-child(2) { animation-delay: 0.4s; }
-.level:nth-child(3) { animation-delay: 0.6s; }
-.level:nth-child(4) { animation-delay: 0.8s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Hover effect for entire .level box */
-.level:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ------------------ Form Styling ------------------ */
 form {
   background: #fff;
   padding: 20px;
-  width: 300px;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -344,12 +334,17 @@ label {
   margin: 10px 0 5px;
 }
 
-input {
+input, textarea {
   width: 100%;
   padding: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
 }
 
 button {
@@ -361,8 +356,36 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 button:hover {
   background: #0056b3;
+}
+
+h2 {
+  color: teal;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  max-width: 400px;
+  width: 90%;
+  z-index: 1000;
 }
