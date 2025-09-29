@@ -35,14 +35,17 @@ header h1 {
   font-size: 1rem;
 }
 
+hamburger {
+  justify-content: flex-end;
+}
+
 #hamburger {
   font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
-  
-  
 }
+
 
 /* ------------------ Navigation ------------------ */
 nav {
@@ -55,6 +58,7 @@ nav {
   border: 1px solid #ccc;
   z-index: 1000;
 }
+
 
 nav.show {
   display: block;
@@ -280,6 +284,19 @@ footer {
   gap: 20px;
 }
 
+.cards a {
+  color: #454545;
+  padding: 2px;
+  border: 2px solid #333;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  font-size:20px;
+  color: #454545;
+  width: 10px; /* or set a fixed width */
+  text-decoration: none;
+  
+}
+
 .member-card {
   padding: 40px;
 }
@@ -350,7 +367,7 @@ textarea {
 button {
   width: 100%;
   padding: 10px;
-  background: #007BFF;
+  background: #454545;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -364,7 +381,7 @@ button:hover {
 }
 
 h2 {
-  color: teal;
+  color: #454545;
   margin-bottom: 15px;
   border-bottom: 2px solid #ddd;
   padding-bottom: 5px;
